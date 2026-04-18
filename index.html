@@ -1,0 +1,3619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speedy Dish Restaurant & Lounge | Ilupeju, Lagos</title>
+    <meta name="description"
+        content="Speedy Dish Restaurant & Lounge – Authentic Nigerian cuisine, fast food, fusion dishes, and premium nightlife in Ilupeju, Lagos." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        /* =============================================
+       CSS CUSTOM PROPERTIES
+    ============================================= */
+        :root {
+            --orange: #FF5A00;
+            --orange-dk: #CC3D00;
+            --orange-lt: #FF8C42;
+            --red: #E8001D;
+            --black: #0D0D0D;
+            --charcoal: #1A1A1A;
+            --graphite: #2C2C2C;
+            --white: #FFFFFF;
+            --cream: #FFF8F3;
+            --light: #F5F1EE;
+            --muted: #888;
+            --gold: #FFB800;
+
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-head: 'Syne', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+
+            --radius: 12px;
+            --radius-lg: 24px;
+            --shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.2);
+            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* =============================================
+       RESET & BASE
+    ============================================= */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--white);
+            color: var(--black);
+            overflow-x: hidden;
+            line-height: 1.65;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+        }
+
+        input,
+        textarea,
+        select {
+            font-family: var(--font-body);
+            outline: none;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-family: var(--font-head);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.1;
+            color: var(--black);
+            margin-bottom: 16px;
+        }
+
+        .section-title span {
+            color: var(--orange);
+        }
+
+        .section-sub {
+            font-size: 1.05rem;
+            color: var(--muted);
+            max-width: 560px;
+            margin-bottom: 48px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--orange);
+            color: var(--white);
+            box-shadow: 0 6px 24px rgba(255, 90, 0, 0.35);
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-dk);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 32px rgba(255, 90, 0, 0.45);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--white);
+        }
+
+        .btn-dark {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .btn-dark:hover {
+            background: var(--graphite);
+            transform: translateY(-2px);
+        }
+
+        /* =============================================
+       PROMO BANNER
+    ============================================= */
+        #promo-banner {
+            background: var(--orange);
+            color: var(--white);
+            text-align: center;
+            padding: 10px 24px;
+            font-family: var(--font-head);
+            font-weight: 600;
+            font-size: 0.88rem;
+            letter-spacing: 0.06em;
+            position: relative;
+            z-index: 1000;
+        }
+
+        #promo-banner strong {
+            font-weight: 800;
+        }
+
+        #promo-close {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* =============================================
+       NAVIGATION
+    ============================================= */
+        #navbar {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: rgba(13, 13, 13, 0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            transition: var(--transition);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo-icon {
+            width: 38px;
+            height: 38px;
+            background: var(--orange);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .nav-logo-text {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--white);
+            line-height: 1.2;
+        }
+
+        .nav-logo-text span {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 400;
+            color: var(--orange);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.75);
+            font-family: var(--font-head);
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.04em;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            transition: width 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-cta .btn {
+            padding: 9px 20px;
+            font-size: 0.82rem;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .hamburger.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: var(--charcoal);
+            padding: 20px 24px 28px;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .mobile-menu.open {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: var(--font-head);
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            transition: color 0.2s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--orange);
+        }
+
+        .mobile-menu .btn {
+            margin-top: 16px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* =============================================
+       HERO SECTION
+    ============================================= */
+        #hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--black);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 80% at 70% 50%, rgba(255, 90, 0, 0.18) 0%, transparent 65%),
+                radial-gradient(ellipse 40% 60% at 10% 80%, rgba(232, 0, 29, 0.1) 0%, transparent 55%),
+                linear-gradient(135deg, #0D0D0D 0%, #1A0800 50%, #0D0D0D 100%);
+        }
+
+        .hero-grid-overlay {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 90, 0, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 90, 0, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+            width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 90, 0, 0.15);
+            border: 1px solid rgba(255, 90, 0, 0.3);
+            border-radius: 50px;
+            padding: 6px 16px;
+            font-family: var(--font-head);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--orange-lt);
+            margin-bottom: 24px;
+            animation: fadeDown 0.8s ease both;
+        }
+
+        .hero-badge i {
+            font-size: 0.7rem;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(3.5rem, 8vw, 7rem);
+            color: var(--white);
+            line-height: 0.95;
+            letter-spacing: 0.02em;
+            margin-bottom: 20px;
+            animation: fadeUp 0.9s ease 0.1s both;
+        }
+
+        .hero-title .line-orange {
+            color: var(--orange);
+        }
+
+        .hero-title .line-outline {
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+            color: transparent;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.65);
+            max-width: 440px;
+            margin-bottom: 36px;
+            animation: fadeUp 0.9s ease 0.2s both;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            animation: fadeUp 0.9s ease 0.3s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 48px;
+            animation: fadeUp 0.9s ease 0.4s both;
+        }
+
+        .hero-stat-num {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: var(--orange);
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.45);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 500;
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeLeft 1s ease 0.2s both;
+        }
+
+        .hero-dish-ring {
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 90, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: spin 20s linear infinite;
+        }
+
+        .hero-dish-ring::before {
+            content: '';
+            position: absolute;
+            inset: 20px;
+            border-radius: 50%;
+            border: 1px dashed rgba(255, 90, 0, 0.15);
+        }
+
+        .hero-dish-center {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 90, 0, 0.25), rgba(255, 90, 0, 0.05));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 7rem;
+            animation: spin 20s linear infinite reverse;
+            box-shadow: 0 0 80px rgba(255, 90, 0, 0.2), inset 0 0 40px rgba(255, 90, 0, 0.1);
+            border: 1px solid rgba(255, 90, 0, 0.25);
+        }
+
+        .hero-float-badge {
+            position: absolute;
+            background: var(--charcoal);
+            border: 1px solid rgba(255, 90, 0, 0.3);
+            border-radius: 14px;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: float 3s ease-in-out infinite;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-float-badge.top-right {
+            top: 30px;
+            right: -20px;
+            animation-delay: 0s;
+        }
+
+        .hero-float-badge.bottom-left {
+            bottom: 40px;
+            left: -30px;
+            animation-delay: 1.5s;
+        }
+
+        .hero-float-icon {
+            font-size: 1.4rem;
+        }
+
+        .hero-float-text {
+            font-family: var(--font-head);
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .hero-float-sub {
+            font-size: 0.67rem;
+            color: var(--orange-lt);
+        }
+
+        .hero-scroll-hint {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            animation: fadeIn 1s ease 1s both;
+        }
+
+        .hero-scroll-hint i {
+            animation: bounceY 1.5s ease-in-out infinite;
+        }
+
+        /* =============================================
+       FEATURES STRIP
+    ============================================= */
+        #features-strip {
+            background: var(--orange);
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .features-ticker {
+            display: flex;
+            animation: tickerScroll 18s linear infinite;
+            white-space: nowrap;
+        }
+
+        .features-ticker-inner {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            flex-shrink: 0;
+        }
+
+        .ticker-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 40px;
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--white);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .ticker-item i {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* =============================================
+       ABOUT SECTION
+    ============================================= */
+        #about {
+            background: var(--cream);
+            padding: 100px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .about-img-main {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: linear-gradient(135deg, var(--charcoal), var(--graphite));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-img-main::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(255, 90, 0, 0.6) 0%, transparent 50%);
+        }
+
+        .about-img-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--orange);
+            color: var(--white);
+            padding: 20px 24px;
+            border-radius: var(--radius);
+            font-family: var(--font-head);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .about-img-badge .num {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        .about-img-badge .label {
+            font-size: 0.75rem;
+            opacity: 0.85;
+            font-weight: 600;
+        }
+
+        .about-img-small {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 130px;
+            height: 130px;
+            border-radius: var(--radius);
+            background: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            border: 4px solid var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .about-content .section-sub {
+            margin-bottom: 24px;
+        }
+
+        .about-pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 28px 0 36px;
+        }
+
+        .about-pillar {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 20px;
+            border-left: 4px solid var(--orange);
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+            transition: var(--transition);
+        }
+
+        .about-pillar:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .about-pillar-icon {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .about-pillar-title {
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--black);
+        }
+
+        .about-pillar-sub {
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+        /* =============================================
+       FEATURED DISHES (HOME)
+    ============================================= */
+        #featured {
+            background: var(--white);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .dish-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            cursor: pointer;
+        }
+
+        .dish-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .dish-img {
+            height: 200px;
+            background: linear-gradient(135deg, var(--charcoal), var(--graphite));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dish-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 60%);
+        }
+
+        .dish-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 1;
+            background: var(--orange);
+            color: white;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-family: var(--font-head);
+        }
+
+        .dish-body {
+            padding: 20px;
+        }
+
+        .dish-name {
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--black);
+            margin-bottom: 6px;
+        }
+
+        .dish-desc {
+            font-size: 0.82rem;
+            color: var(--muted);
+            line-height: 1.55;
+            margin-bottom: 14px;
+        }
+
+        .dish-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .dish-price {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--orange);
+        }
+
+        .dish-order {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--orange);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .dish-order:hover {
+            background: var(--orange-dk);
+            transform: scale(1.1);
+        }
+
+        /* =============================================
+       FULL MENU SECTION
+    ============================================= */
+        #menu {
+            background: var(--light);
+        }
+
+        .menu-tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .menu-tab {
+            padding: 10px 22px;
+            border-radius: 50px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.82rem;
+            color: var(--muted);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .menu-tab:hover {
+            border-color: var(--orange);
+            color: var(--orange);
+        }
+
+        .menu-tab.active {
+            background: var(--orange);
+            border-color: var(--orange);
+            color: white;
+            box-shadow: 0 4px 16px rgba(255, 90, 0, 0.3);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-category {
+            display: none;
+        }
+
+        .menu-category.active {
+            display: contents;
+        }
+
+        .menu-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 18px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .menu-item:hover {
+            border-color: var(--orange);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(255, 90, 0, 0.1);
+        }
+
+        .menu-item-emoji {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+            border-radius: 12px;
+            background: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .menu-item-info {
+            flex: 1;
+        }
+
+        .menu-item-name {
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--black);
+        }
+
+        .menu-item-desc {
+            font-size: 0.75rem;
+            color: var(--muted);
+            margin-top: 3px;
+            line-height: 1.4;
+        }
+
+        .menu-item-price {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            color: var(--orange);
+            white-space: nowrap;
+        }
+
+        /* =============================================
+       LOUNGE / NIGHTLIFE SECTION
+    ============================================= */
+        #lounge {
+            background: var(--black);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #lounge::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 50% 70% at 80% 30%, rgba(255, 90, 0, 0.12) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 50% at 20% 70%, rgba(232, 0, 29, 0.08) 0%, transparent 60%);
+        }
+
+        .lounge-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .lounge-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .lounge-content .section-title {
+            color: var(--white);
+        }
+
+        .lounge-content .section-sub {
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .lounge-features {
+            margin: 32px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .lounge-feat {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 18px;
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: var(--transition);
+        }
+
+        .lounge-feat:hover {
+            background: rgba(255, 90, 0, 0.08);
+            border-color: rgba(255, 90, 0, 0.2);
+        }
+
+        .lounge-feat-icon {
+            width: 42px;
+            height: 42px;
+            min-width: 42px;
+            border-radius: 10px;
+            background: rgba(255, 90, 0, 0.15);
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .lounge-feat-title {
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--white);
+        }
+
+        .lounge-feat-sub {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.45);
+            margin-top: 3px;
+        }
+
+        .lounge-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .lounge-card {
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 3/4;
+            background: var(--charcoal);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 16px;
+            transition: var(--transition);
+        }
+
+        .lounge-card:first-child {
+            grid-row: span 2;
+            aspect-ratio: auto;
+        }
+
+        .lounge-card:hover {
+            transform: scale(1.02);
+        }
+
+        .lounge-card-emoji {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            opacity: 0.6;
+        }
+
+        .lounge-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 50%);
+        }
+
+        .lounge-card-label {
+            position: relative;
+            z-index: 1;
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .lounge-card-sub {
+            font-size: 0.7rem;
+            color: var(--orange-lt);
+            margin-top: 3px;
+            text-align: center;
+        }
+
+        /* =============================================
+       EVENTS SECTION
+    ============================================= */
+        #events {
+            background: var(--cream);
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .event-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+            transition: var(--transition);
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .event-header {
+            background: var(--black);
+            padding: 28px 24px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at top right, rgba(255, 90, 0, 0.25), transparent 60%);
+        }
+
+        .event-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .event-day {
+            font-family: var(--font-head);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 6px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .event-name {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1.15rem;
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .event-body {
+            padding: 20px 24px;
+        }
+
+        .event-desc {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .event-meta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .event-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--black);
+            font-family: var(--font-head);
+        }
+
+        .event-meta-item i {
+            color: var(--orange);
+            font-size: 0.72rem;
+        }
+
+        /* =============================================
+       GALLERY SECTION
+    ============================================= */
+        #gallery {
+            background: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap: 12px;
+            margin-top: 48px;
+        }
+
+        .gallery-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--graphite);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 2;
+        }
+
+        .gallery-item:nth-child(5) {
+            grid-column: span 2;
+        }
+
+        .gallery-item:hover {
+            transform: scale(0.98);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(255, 90, 0, 0.6) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        .gallery-item-label {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: white;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: var(--transition);
+            z-index: 1;
+        }
+
+        .gallery-item:hover .gallery-item-label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =============================================
+       TESTIMONIALS SECTION
+    ============================================= */
+        #reviews {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        #reviews .section-title {
+            color: var(--white);
+        }
+
+        #reviews .section-sub {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 48px;
+        }
+
+        .review-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .review-card:hover {
+            background: rgba(255, 90, 0, 0.06);
+            border-color: rgba(255, 90, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .review-card.featured {
+            grid-row: span 1;
+            background: rgba(255, 90, 0, 0.08);
+            border-color: rgba(255, 90, 0, 0.25);
+        }
+
+        .review-quote {
+            font-size: 2.5rem;
+            color: var(--orange);
+            line-height: 1;
+            font-family: Georgia, serif;
+            margin-bottom: 14px;
+            opacity: 0.5;
+        }
+
+        .review-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .review-stars {
+            color: var(--gold);
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+            letter-spacing: 3px;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .review-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--orange), var(--red));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        .review-name {
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--white);
+        }
+
+        .review-role {
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 2px;
+        }
+
+        /* =============================================
+       RESERVATIONS SECTION
+    ============================================= */
+        #reservations {
+            background: var(--cream);
+        }
+
+        .res-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .res-info {
+            padding-top: 8px;
+        }
+
+        .res-info .section-sub {
+            margin-bottom: 32px;
+        }
+
+        .res-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px;
+            border-radius: var(--radius);
+            background: var(--white);
+            margin-bottom: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .res-contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255, 90, 0, 0.1);
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .res-contact-label {
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.82rem;
+            color: var(--black);
+        }
+
+        .res-contact-value {
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        .res-form {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .res-form h3 {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .res-form p {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.04em;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: var(--black);
+            background: var(--light);
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--orange);
+            background: white;
+        }
+
+        .form-group textarea {
+            height: 90px;
+            resize: none;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 15px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            justify-content: center;
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .form-success i {
+            font-size: 3rem;
+            color: var(--orange);
+            margin-bottom: 12px;
+        }
+
+        .form-success h4 {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--black);
+        }
+
+        .form-success p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-top: 6px;
+        }
+
+        /* =============================================
+       CONTACT SECTION
+    ============================================= */
+        #contact {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-card {
+            background: var(--light);
+            border-radius: var(--radius);
+            padding: 22px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            background: var(--cream);
+            transform: translateX(4px);
+        }
+
+        .contact-card-icon {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            border-radius: 12px;
+            background: var(--orange);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .contact-card-title {
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .contact-card-val {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+
+        .wa-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            transition: var(--transition);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .wa-btn:hover {
+            background: #1fb855;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(37, 211, 102, 0.4);
+        }
+
+        .contact-map {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 420px;
+            background: var(--light);
+            position: relative;
+        }
+
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        /* =============================================
+       NEWSLETTER SECTION
+    ============================================= */
+        #newsletter {
+            background: var(--orange);
+            padding: 70px 0;
+        }
+
+        .newsletter-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-text h2 {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            color: var(--white);
+            margin-bottom: 6px;
+        }
+
+        .newsletter-text p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.95rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+            max-width: 420px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 13px 18px;
+            border-radius: 50px;
+            border: none;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 0.9rem;
+            font-family: var(--font-body);
+            backdrop-filter: blur(4px);
+        }
+
+        .newsletter-form input::placeholder {
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.22);
+        }
+
+        .newsletter-form .btn {
+            background: var(--black);
+            color: white;
+            padding: 13px 24px;
+            border-radius: 50px;
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.88rem;
+            white-space: nowrap;
+            transition: var(--transition);
+        }
+
+        .newsletter-form .btn:hover {
+            background: var(--charcoal);
+        }
+
+        /* =============================================
+       FOOTER
+    ============================================= */
+        footer {
+            background: var(--black);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand {}
+
+        .footer-logo {
+            margin-bottom: 16px;
+        }
+
+        .footer-about {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.07);
+            color: rgba(255, 255, 255, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background: var(--orange);
+            color: white;
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--white);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--orange);
+        }
+
+        .footer-hours p {
+            font-size: 0.82rem;
+            margin-bottom: 6px;
+        }
+
+        .footer-hours span {
+            color: white;
+            font-weight: 500;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.8rem;
+        }
+
+        .footer-bottom a {
+            color: var(--orange);
+        }
+
+        /* =============================================
+       SCROLL TO TOP
+    ============================================= */
+        #scroll-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--orange);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(255, 90, 0, 0.4);
+            cursor: pointer;
+            z-index: 900;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: var(--transition);
+            font-size: 0.95rem;
+            border: none;
+        }
+
+        #scroll-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #scroll-top:hover {
+            background: var(--orange-dk);
+            transform: translateY(-3px);
+        }
+
+        /* =============================================
+       ANIMATIONS
+    ============================================= */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeLeft {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        @keyframes bounceY {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(6px);
+            }
+        }
+
+        @keyframes tickerScroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Reveal on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        .reveal-delay-5 {
+            transition-delay: 0.5s;
+        }
+
+        /* =============================================
+       RESPONSIVE DESIGN
+    ============================================= */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-tagline {
+                margin: 0 auto 36px;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .about-visual {
+                max-width: 480px;
+                margin: 0 auto;
+            }
+
+            .lounge-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 64px 0;
+            }
+
+            .nav-links,
+            .nav-cta {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+            }
+
+            .gallery-item:nth-child(1),
+            .gallery-item:nth-child(5) {
+                grid-column: span 2;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .res-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .newsletter-form {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-pillars {
+                grid-template-columns: 1fr;
+            }
+
+            .res-form {
+                padding: 24px;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =============================================
+       PROMO BANNER
+  ============================================= -->
+    <div id="promo-banner">
+        🔥 <strong>HAPPY HOUR SPECIAL</strong> – 20% OFF all drinks & small chops | Mon–Fri 5PM–8PM
+        <button id="promo-close" onclick="this.parentElement.style.display='none'" aria-label="Close">✕</button>
+    </div>
+
+    <!-- =============================================
+       NAVIGATION
+  ============================================= -->
+    <nav id="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="nav-inner">
+            <!-- Logo -->
+            <a href="#hero" class="nav-logo" aria-label="Speedy Dish Home">
+                <div class="nav-logo-icon">🍽️</div>
+                <div class="nav-logo-text">
+                    Speedy Dish
+                    <span>Restaurant & Lounge</span>
+                </div>
+            </a>
+
+            <!-- Desktop links -->
+            <ul class="nav-links" role="list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#lounge">Lounge</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Desktop CTA -->
+            <div class="nav-cta">
+                <a href="#reservations" class="btn btn-outline"
+                    style="color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.25);font-size:0.8rem;padding:8px 18px;">
+                    <i class="fa fa-calendar"></i> Book Table
+                </a>
+                <a href="#menu" class="btn btn-primary" style="font-size:0.8rem;padding:8px 18px;">
+                    <i class="fa fa-bolt"></i> Order Now
+                </a>
+            </div>
+
+            <!-- Mobile hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu" role="menu">
+            <a href="#about" role="menuitem">About Us</a>
+            <a href="#menu" role="menuitem">Our Menu</a>
+            <a href="#lounge" role="menuitem">Lounge & Nightlife</a>
+            <a href="#events" role="menuitem">Events</a>
+            <a href="#gallery" role="menuitem">Gallery</a>
+            <a href="#reviews" role="menuitem">Reviews</a>
+            <a href="#contact" role="menuitem">Contact</a>
+            <a href="#reservations" class="btn btn-primary">🗓 Book a Table</a>
+            <a href="#menu" class="btn btn-dark" style="margin-top:8px;">⚡ Order Now</a>
+        </div>
+    </nav>
+
+    <!-- =============================================
+       HERO SECTION
+  ============================================= -->
+    <section id="hero" aria-label="Hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid-overlay"></div>
+
+        <div class="hero-content">
+            <!-- Left: Text -->
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fa fa-star"></i>
+                    Ilupeju's Finest Restaurant & Lounge
+                </div>
+                <h1 class="hero-title">
+                    EAT<br>
+                    <span class="line-orange">BOLD.</span><br>
+                    <span class="line-outline">LIVE</span><br>
+                    LOUDER.
+                </h1>
+                <p class="hero-tagline">
+                    Authentic Nigerian flavours, fast food fusions, and a nightlife experience like no other.
+                    Dine fast, live slow, and turn up all night long.
+                </p>
+                <div class="hero-cta">
+                    <a href="#menu" class="btn btn-primary">
+                        <i class="fa fa-bolt"></i> Order Now
+                    </a>
+                    <a href="#reservations" class="btn btn-outline">
+                        <i class="fa fa-calendar-check"></i> Book a Table
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="hero-stat-num">50+</div>
+                        <div class="hero-stat-label">Dishes</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num">5★</div>
+                        <div class="hero-stat-label">Rated</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num">7yrs</div>
+                        <div class="hero-stat-label">Of Service</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Visual -->
+            <div class="hero-visual" aria-hidden="true">
+                <div class="hero-dish-ring">
+                    <div class="hero-dish-center">🍛</div>
+                </div>
+                <!-- Float badges -->
+                <div class="hero-float-badge top-right">
+                    <div class="hero-float-icon">🍺</div>
+                    <div>
+                        <div class="hero-float-text">Lounge Open</div>
+                        <div class="hero-float-sub">10PM – 4AM</div>
+                    </div>
+                </div>
+                <div class="hero-float-badge bottom-left">
+                    <div class="hero-float-icon">🔥</div>
+                    <div>
+                        <div class="hero-float-text">Jollof Rice</div>
+                        <div class="hero-float-sub">Best in Lagos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="hero-scroll-hint" aria-hidden="true">
+            <span>Scroll</span>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- =============================================
+       FEATURES TICKER STRIP
+  ============================================= -->
+    <div id="features-strip" aria-hidden="true">
+        <div class="features-ticker">
+            <!-- Duplicated for seamless loop -->
+            <div class="features-ticker-inner">
+                <div class="ticker-item"><i class="fa fa-fire"></i> Nigerian Cuisine</div>
+                <div class="ticker-item"><i class="fa fa-music"></i> DJ Nights</div>
+                <div class="ticker-item"><i class="fa fa-bolt"></i> Fast Delivery</div>
+                <div class="ticker-item"><i class="fa fa-cocktail"></i> Cocktail Bar</div>
+                <div class="ticker-item"><i class="fa fa-star"></i> Suya & Pepper Soup</div>
+                <div class="ticker-item"><i class="fa fa-moon"></i> Open Till 4AM</div>
+                <div class="ticker-item"><i class="fa fa-utensils"></i> Shawarma & Wraps</div>
+                <div class="ticker-item"><i class="fa fa-calendar"></i> Private Events</div>
+                <div class="ticker-item"><i class="fa fa-fire"></i> Nigerian Cuisine</div>
+                <div class="ticker-item"><i class="fa fa-music"></i> DJ Nights</div>
+                <div class="ticker-item"><i class="fa fa-bolt"></i> Fast Delivery</div>
+                <div class="ticker-item"><i class="fa fa-cocktail"></i> Cocktail Bar</div>
+                <div class="ticker-item"><i class="fa fa-star"></i> Suya & Pepper Soup</div>
+                <div class="ticker-item"><i class="fa fa-moon"></i> Open Till 4AM</div>
+                <div class="ticker-item"><i class="fa fa-utensils"></i> Shawarma & Wraps</div>
+                <div class="ticker-item"><i class="fa fa-calendar"></i> Private Events</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================================
+       ABOUT SECTION
+  ============================================= -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Visual side -->
+                <div class="about-visual reveal">
+                    <div class="about-img-main">
+                        <span style="position:relative;z-index:1;font-size:5rem;">🍽️</span>
+                        <div style="position:absolute;bottom:20px;left:20px;z-index:2;color:white;">
+                            <div style="font-family:var(--font-display);font-size:1.8rem;line-height:1;">Taste the</div>
+                            <div style="font-family:var(--font-display);font-size:2.4rem;color:var(--orange);">
+                                Experience</div>
+                        </div>
+                    </div>
+                    <div class="about-img-badge">
+                        <div class="num">7+</div>
+                        <div class="label">Years Serving Lagos</div>
+                    </div>
+                    <div class="about-img-small">🍖</div>
+                </div>
+
+                <!-- Content side -->
+                <div class="about-content">
+                    <span class="section-tag">Our Story</span>
+                    <h2 class="section-title reveal">Where Lagos <span>Eats</span> & Comes Alive</h2>
+                    <p class="section-sub reveal reveal-delay-1">
+                        Speedy Dish Restaurant & Lounge was born from a simple idea: that great food and unforgettable
+                        nights
+                        belong together. Nestled in the heart of Ilupeju, we've been feeding Lagos with love since day
+                        one.
+                    </p>
+                    <p style="font-size:0.9rem;color:var(--muted);margin-bottom:24px;line-height:1.75;"
+                        class="reveal reveal-delay-2">
+                        From our smoky suya grills to our sophisticated cocktail bar, every corner of Speedy Dish tells
+                        a
+                        story of culture, flavor, and energy. By day, we're your go-to for a quick, delicious meal.
+                        By night, we transform into Ilupeju's most vibrant lounge experience.
+                    </p>
+
+                    <div class="about-pillars reveal reveal-delay-3">
+                        <div class="about-pillar">
+                            <div class="about-pillar-icon">🔥</div>
+                            <div class="about-pillar-title">Authentic Flavors</div>
+                            <div class="about-pillar-sub">100% Nigerian recipes, made fresh daily</div>
+                        </div>
+                        <div class="about-pillar">
+                            <div class="about-pillar-icon">⚡</div>
+                            <div class="about-pillar-title">Quick Service</div>
+                            <div class="about-pillar-sub">Your food, fast — no compromise on quality</div>
+                        </div>
+                        <div class="about-pillar">
+                            <div class="about-pillar-icon">🎶</div>
+                            <div class="about-pillar-title">Premium Nightlife</div>
+                            <div class="about-pillar-sub">DJ nights, cocktails & a vibe unmatched</div>
+                        </div>
+                        <div class="about-pillar">
+                            <div class="about-pillar-icon">🌟</div>
+                            <div class="about-pillar-title">5-Star Service</div>
+                            <div class="about-pillar-sub">Hospitality that makes you feel at home</div>
+                        </div>
+                    </div>
+
+                    <a href="#menu" class="btn btn-primary reveal reveal-delay-4">
+                        <i class="fa fa-utensils"></i> Explore Our Menu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+       FEATURED DISHES
+  ============================================= -->
+    <section id="featured">
+        <div class="container">
+            <div class="text-center" style="text-align:center;">
+                <span class="section-tag">Chef's Picks</span>
+                <h2 class="section-title reveal" style="margin:0 auto 12px;">Customer <span>Favourites</span></h2>
+                <p class="section-sub reveal reveal-delay-1" style="margin:0 auto 0;">The dishes Lagos keeps coming back
+                    for, every single time.</p>
+            </div>
+
+            <div class="featured-grid">
+                <!-- Card 1 -->
+                <div class="dish-card reveal">
+                    <div class="dish-img" style="background:linear-gradient(135deg,#3D1C00,#6B3500);">
+                        <span style="position:relative;z-index:1;">🍛</span>
+                        <span class="dish-tag">Bestseller</span>
+                    </div>
+                    <div class="dish-body">
+                        <div class="dish-name">Party Jollof Rice</div>
+                        <div class="dish-desc">Smoky, firewood-style jollof with your choice of chicken, beef, or fish.
+                            Served with fried plantain.</div>
+                        <div class="dish-footer">
+                            <div class="dish-price">₦3,500</div>
+                            <a href="#menu" class="dish-order"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="dish-card reveal reveal-delay-1">
+                    <div class="dish-img" style="background:linear-gradient(135deg,#4A0000,#8B1A1A);">
+                        <span style="position:relative;z-index:1;">🥩</span>
+                        <span class="dish-tag">🔥 Spicy</span>
+                    </div>
+                    <div class="dish-body">
+                        <div class="dish-name">Speedy Suya Platter</div>
+                        <div class="dish-desc">Skewered beef suya with onions, tomatoes & yaji spice. The Lagos classic
+                            done right.</div>
+                        <div class="dish-footer">
+                            <div class="dish-price">₦2,800</div>
+                            <a href="#menu" class="dish-order"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="dish-card reveal reveal-delay-2">
+                    <div class="dish-img" style="background:linear-gradient(135deg,#002244,#003A6B);">
+                        <span style="position:relative;z-index:1;">🐟</span>
+                        <span class="dish-tag">Chef's Special</span>
+                    </div>
+                    <div class="dish-body">
+                        <div class="dish-name">Catfish Pepper Soup</div>
+                        <div class="dish-desc">Rich, aromatic pepper soup with fresh catfish, utazi leaves & native
+                            spices. Soul food at its finest.</div>
+                        <div class="dish-footer">
+                            <div class="dish-price">₦4,200</div>
+                            <a href="#menu" class="dish-order"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:40px;" class="reveal">
+                <a href="#menu" class="btn btn-dark">
+                    View Full Menu <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+       MENU PAGE
+  ============================================= -->
+    <section id="menu">
+        <div class="container">
+            <span class="section-tag">What We Serve</span>
+            <h2 class="section-title reveal">Our <span>Menu</span></h2>
+            <p class="section-sub reveal reveal-delay-1">
+                From Nigerian classics to fusion fast food — there's something for every craving and every occasion.
+            </p>
+
+            <!-- Category Tabs -->
+            <div class="menu-tabs reveal reveal-delay-2" role="tablist">
+                <button class="menu-tab active" onclick="switchTab(this,'nigerian')" role="tab" aria-selected="true">🍛
+                    Nigerian</button>
+                <button class="menu-tab" onclick="switchTab(this,'fastfood')" role="tab" aria-selected="false">🌯 Fast
+                    Food</button>
+                <button class="menu-tab" onclick="switchTab(this,'fusion')" role="tab" aria-selected="false">✨
+                    Fusion</button>
+                <button class="menu-tab" onclick="switchTab(this,'grills')" role="tab" aria-selected="false">🔥
+                    Grills</button>
+                <button class="menu-tab" onclick="switchTab(this,'drinks')" role="tab" aria-selected="false">🍹
+                    Drinks</button>
+                <button class="menu-tab" onclick="switchTab(this,'smallchops')" role="tab" aria-selected="false">🍢
+                    Small Chops</button>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+
+                <!-- NIGERIAN -->
+                <div class="menu-category active" id="cat-nigerian">
+                    <div class="menu-item reveal">
+                        <div class="menu-item-emoji">🍛</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Party Jollof Rice</div>
+                            <div class="menu-item-desc">Firewood-style jollof + chicken/beef/fish + plantain</div>
+                        </div>
+                        <div class="menu-item-price">₦3,500</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-1">
+                        <div class="menu-item-emoji">🍚</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Fried Rice Combo</div>
+                            <div class="menu-item-desc">Nigerian fried rice + coleslaw + choice of protein</div>
+                        </div>
+                        <div class="menu-item-price">₦3,200</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-2">
+                        <div class="menu-item-emoji">🐟</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Catfish Pepper Soup</div>
+                            <div class="menu-item-desc">Aromatic native spices, fresh catfish, utazi</div>
+                        </div>
+                        <div class="menu-item-price">₦4,200</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-3">
+                        <div class="menu-item-emoji">🥘</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Egusi Soup + Pounded Yam</div>
+                            <div class="menu-item-desc">Rich melon seed soup + smooth pounded yam</div>
+                        </div>
+                        <div class="menu-item-price">₦4,500</div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item-emoji">🍲</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Banga Soup + White Rice</div>
+                            <div class="menu-item-desc">Delta-style palm nut soup, assorted meat</div>
+                        </div>
+                        <div class="menu-item-price">₦4,800</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-1">
+                        <div class="menu-item-emoji">🫕</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Ofada Rice & Stew</div>
+                            <div class="menu-item-desc">Local brown rice + spicy ayamase sauce</div>
+                        </div>
+                        <div class="menu-item-price">₦3,800</div>
+                    </div>
+                </div>
+
+                <!-- FAST FOOD -->
+                <div class="menu-category" id="cat-fastfood">
+                    <div class="menu-item reveal">
+                        <div class="menu-item-emoji">🌯</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Chicken Shawarma</div>
+                            <div class="menu-item-desc">Grilled chicken, veggies, garlic sauce, pita wrap</div>
+                        </div>
+                        <div class="menu-item-price">₦2,500</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-1">
+                        <div class="menu-item-emoji">🥙</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Beef Shawarma</div>
+                            <div class="menu-item-desc">Spiced beef strips, coleslaw, hot sauce, wrap</div>
+                        </div>
+                        <div class="menu-item-price">₦2,800</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-2">
+                        <div class="menu-item-emoji">🍔</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Speedy Burger</div>
+                            <div class="menu-item-desc">Double beef patty, cheddar, lettuce, signature sauce</div>
+                        </div>
+                        <div class="menu-item-price">₦3,000</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-3">
+                        <div class="menu-item-emoji">🍟</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Chicken & Chips</div>
+                            <div class="menu-item-desc">Crispy fried chicken + seasoned french fries</div>
+                        </div>
+                        <div class="menu-item-price">₦2,500</div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item-emoji">🌮</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Chicken Wrap</div>
+                            <div class="menu-item-desc">Grilled chicken, avocado, mixed greens, ranch</div>
+                        </div>
+                        <div class="menu-item-price">₦2,200</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-1">
+                        <div class="menu-item-emoji">🍕</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Mini Pizza (4 slices)</div>
+                            <div class="menu-item-desc">Tomato base, mozzarella, pepperoni or veggie</div>
+                        </div>
+                        <div class="menu-item-price">₦3,500</div>
+                    </div>
+                </div>
+
+                <!-- FUSION -->
+                <div class="menu-category" id="cat-fusion">
+                    <div class="menu-item reveal">
+                        <div class="menu-item-emoji">🍜</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Jollof Pasta</div>
+                            <div class="menu-item-desc">Nigerian jollof spices meets Italian pasta perfection</div>
+                        </div>
+                        <div class="menu-item-price">₦3,200</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-1">
+                        <div class="menu-item-emoji">🥗</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Suya Salad Bowl</div>
+                            <div class="menu-item-desc">Suya-spiced chicken over mixed greens, yaji dressing</div>
+                        </div>
+                        <div class="menu-item-price">₦3,500</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-2">
+                        <div class="menu-item-emoji">🍣</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Banga Noodles</div>
+                            <div class="menu-item-desc">Palm nut broth noodles with grilled tilapia</div>
+                        </div>
+                        <div class="menu-item-price">₦4,000</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-3">
+                        <div class="menu-item-emoji">🌶️</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Jerk Peppersoup Wings</div>
+                            <div class="menu-item-desc">Jamaican jerk meets Nigerian pepper soup marinade</div>
+                        </div>
+                        <div class="menu-item-price">₦4,500</div>
+                    </div>
+                </div>
+
+                <!-- GRILLS -->
+                <div class="menu-category" id="cat-grills">
+                    <div class="menu-item reveal">
+                        <div class="menu-item-emoji">🥩</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Speedy Suya Platter</div>
+                            <div class="menu-item-desc">Skewered beef, yaji spice, onions, tomato</div>
+                        </div>
+                        <div class="menu-item-price">₦2,800</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-1">
+                        <div class="menu-item-emoji">🍗</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Grilled Chicken (½)</div>
+                            <div class="menu-item-desc">Marinated half chicken, grilled with herbs & spices</div>
+                        </div>
+                        <div class="menu-item-price">₦4,000</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-2">
+                        <div class="menu-item-emoji">🐟</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Grilled Tilapia</div>
+                            <div class="menu-item-desc">Whole tilapia, native spices, pepper sauce, veggies</div>
+                        </div>
+                        <div class="menu-item-price">₦5,000</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-3">
+                        <div class="menu-item-emoji">🦐</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Peppered Prawns</div>
+                            <div class="menu-item-desc">Jumbo prawns in rich pepper & tomato sauce</div>
+                        </div>
+                        <div class="menu-item-price">₦6,500</div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item-emoji">🥓</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">BBQ Pork Ribs</div>
+                            <div class="menu-item-desc">Fall-off-bone ribs, house BBQ glaze, coleslaw</div>
+                        </div>
+                        <div class="menu-item-price">₦7,000</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-1">
+                        <div class="menu-item-emoji">🍢</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Beef Kpomo (Asun style)</div>
+                            <div class="menu-item-desc">Peppered goat meat & kpomo combo, sliced & spicy</div>
+                        </div>
+                        <div class="menu-item-price">₦3,500</div>
+                    </div>
+                </div>
+
+                <!-- DRINKS -->
+                <div class="menu-category" id="cat-drinks">
+                    <div class="menu-item reveal">
+                        <div class="menu-item-emoji">🍹</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Speedy Signature Cocktail</div>
+                            <div class="menu-item-desc">House blend: citrus, rum, ginger, hibiscus</div>
+                        </div>
+                        <div class="menu-item-price">₦3,500</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-1">
+                        <div class="menu-item-emoji">🍸</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Lagos Sunset (Mocktail)</div>
+                            <div class="menu-item-desc">Zobo, ginger, lime, mint — non-alcoholic</div>
+                        </div>
+                        <div class="menu-item-price">₦1,800</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-2">
+                        <div class="menu-item-emoji">🍺</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Premium Lager (Bottles)</div>
+                            <div class="menu-item-desc">Heineken, Star, Guinness, Trophy – served cold</div>
+                        </div>
+                        <div class="menu-item-price">₦800+</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-3">
+                        <div class="menu-item-emoji">🥃</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Whisky & Spirits</div>
+                            <div class="menu-item-desc">Johnnie Walker, Hennessy, Jack Daniel's per measure</div>
+                        </div>
+                        <div class="menu-item-price">₦2,500+</div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item-emoji">🧃</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Fresh Zobo Drink</div>
+                            <div class="menu-item-desc">House-made hibiscus, ginger & cloves — 500ml</div>
+                        </div>
+                        <div class="menu-item-price">₦600</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-1">
+                        <div class="menu-item-emoji">🍾</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Table Bottle Service</div>
+                            <div class="menu-item-desc">Champagne, wine & premium spirits for your table</div>
+                        </div>
+                        <div class="menu-item-price">₦25,000+</div>
+                    </div>
+                </div>
+
+                <!-- SMALL CHOPS -->
+                <div class="menu-category" id="cat-smallchops">
+                    <div class="menu-item reveal">
+                        <div class="menu-item-emoji">🥟</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Small Chops Platter</div>
+                            <div class="menu-item-desc">Puff-puff, spring rolls, samosa, chicken stick (20pcs)</div>
+                        </div>
+                        <div class="menu-item-price">₦4,500</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-1">
+                        <div class="menu-item-emoji">🫓</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Puff-Puff (10pcs)</div>
+                            <div class="menu-item-desc">Soft, golden deep-fried Nigerian dough balls</div>
+                        </div>
+                        <div class="menu-item-price">₦1,200</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-2">
+                        <div class="menu-item-emoji">🥠</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Spring Rolls (6pcs)</div>
+                            <div class="menu-item-desc">Crispy veggie & chicken spring rolls, sweet chilli dip</div>
+                        </div>
+                        <div class="menu-item-price">₦1,800</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-3">
+                        <div class="menu-item-emoji">🐔</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Chicken on Stick (6pcs)</div>
+                            <div class="menu-item-desc">Suya-spiced chicken bites on skewers</div>
+                        </div>
+                        <div class="menu-item-price">₦2,000</div>
+                    </div>
+                    <div class="menu-item reveal">
+                        <div class="menu-item-emoji">🧆</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Samosa (6pcs)</div>
+                            <div class="menu-item-desc">Spiced beef or veggie filled samosas</div>
+                        </div>
+                        <div class="menu-item-price">₦1,500</div>
+                    </div>
+                    <div class="menu-item reveal reveal-delay-1">
+                        <div class="menu-item-emoji">🍤</div>
+                        <div class="menu-item-info">
+                            <div class="menu-item-name">Fried Calamari</div>
+                            <div class="menu-item-desc">Crispy calamari rings, tartar sauce dip</div>
+                        </div>
+                        <div class="menu-item-price">₦2,500</div>
+                    </div>
+                </div>
+
+            </div><!-- /.menu-grid -->
+
+            <div style="text-align:center;margin-top:40px;" class="reveal">
+                <a href="#reservations" class="btn btn-primary">
+                    <i class="fa fa-phone"></i> Call to Order: +234 801 234 5678
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+       LOUNGE / NIGHTLIFE SECTION
+  ============================================= -->
+    <section id="lounge">
+        <div class="container lounge-inner">
+            <div class="lounge-grid">
+                <div class="lounge-content">
+                    <span class="section-tag">The Lounge Experience</span>
+                    <h2 class="section-title reveal">Where Lagos <span>Turns Up</span></h2>
+                    <p class="section-sub reveal reveal-delay-1">
+                        When the sun goes down, Speedy Dish transforms. The grill stays hot, the bar opens up,
+                        and the DJ drops the bass. This is nightlife, Nigerian style.
+                    </p>
+
+                    <div class="lounge-features reveal reveal-delay-2">
+                        <div class="lounge-feat">
+                            <div class="lounge-feat-icon"><i class="fa fa-music"></i></div>
+                            <div>
+                                <div class="lounge-feat-title">Live DJ & Live Band Nights</div>
+                                <div class="lounge-feat-sub">Afrobeats, Amapiano, R&B – every weekend</div>
+                            </div>
+                        </div>
+                        <div class="lounge-feat">
+                            <div class="lounge-feat-icon"><i class="fa fa-cocktail"></i></div>
+                            <div>
+                                <div class="lounge-feat-title">Premium Cocktail Bar</div>
+                                <div class="lounge-feat-sub">Signature mixes, bottle service & curated spirits</div>
+                            </div>
+                        </div>
+                        <div class="lounge-feat">
+                            <div class="lounge-feat-icon"><i class="fa fa-star"></i></div>
+                            <div>
+                                <div class="lounge-feat-title">VIP Table Reservations</div>
+                                <div class="lounge-feat-sub">Exclusive seating for your crew, all night long</div>
+                            </div>
+                        </div>
+                        <div class="lounge-feat">
+                            <div class="lounge-feat-icon"><i class="fa fa-moon"></i></div>
+                            <div>
+                                <div class="lounge-feat-title">Open Till 4AM</div>
+                                <div class="lounge-feat-sub">Because the best nights are the late ones</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#reservations" class="btn btn-primary reveal reveal-delay-3">
+                        <i class="fa fa-calendar-check"></i> Reserve a VIP Table
+                    </a>
+                </div>
+
+                <!-- Lounge visual cards -->
+                <div class="lounge-visual reveal">
+                    <div class="lounge-card" style="background:linear-gradient(135deg,#1A0000,#3D0000);">
+                        <div class="lounge-card-emoji">🎵</div>
+                        <div class="lounge-card-overlay"></div>
+                        <div>
+                            <div class="lounge-card-label">Live Music</div>
+                            <div class="lounge-card-sub">Every Friday & Saturday</div>
+                        </div>
+                    </div>
+                    <div class="lounge-card" style="background:linear-gradient(135deg,#000D2E,#001A4D);">
+                        <div class="lounge-card-emoji">🍸</div>
+                        <div class="lounge-card-overlay"></div>
+                        <div>
+                            <div class="lounge-card-label">Cocktail Bar</div>
+                            <div class="lounge-card-sub">Open Nightly</div>
+                        </div>
+                    </div>
+                    <div class="lounge-card" style="background:linear-gradient(135deg,#1A0A00,#3D2000);">
+                        <div class="lounge-card-emoji">🎤</div>
+                        <div class="lounge-card-overlay"></div>
+                        <div>
+                            <div class="lounge-card-label">DJ Nights</div>
+                            <div class="lounge-card-sub">Afrobeats & More</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+       EVENTS SECTION
+  ============================================= -->
+    <section id="events">
+        <div class="container">
+            <span class="section-tag">What's On</span>
+            <h2 class="section-title reveal">Upcoming <span>Events</span></h2>
+            <p class="section-sub reveal reveal-delay-1">Mark your calendar — there's always something happening at
+                Speedy Dish.</p>
+
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card reveal">
+                    <div class="event-header">
+                        <div class="event-icon">🎵</div>
+                        <div class="event-day">Every Friday Night</div>
+                        <div class="event-name">Speedy Fridays: Afrobeats Night</div>
+                    </div>
+                    <div class="event-body">
+                        <p class="event-desc">
+                            The weekend starts early at Speedy Dish. Our resident DJ serves nothing but the hottest
+                            Afrobeats,
+                            Amapiano & Afro-pop. Come with your crew, grab a table, and let loose.
+                        </p>
+                        <div class="event-meta">
+                            <div class="event-meta-item"><i class="fa fa-clock"></i> 9PM – 3AM</div>
+                            <div class="event-meta-item"><i class="fa fa-map-marker-alt"></i> Main Lounge</div>
+                            <div class="event-meta-item"><i class="fa fa-ticket-alt"></i> Free Entry</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card reveal reveal-delay-1">
+                    <div class="event-header" style="background:linear-gradient(135deg,#0D0D0D,#2C0000);">
+                        <div class="event-icon">🥃</div>
+                        <div class="event-day">Every Saturday</div>
+                        <div class="event-name">Saturday Night Vibes & Bottle Service</div>
+                    </div>
+                    <div class="event-body">
+                        <p class="event-desc">
+                            Lagos' busiest night gets the Speedy treatment. Reserve your VIP table, order a premium
+                            bottle,
+                            and enjoy an unmatched lounge experience in Ilupeju.
+                        </p>
+                        <div class="event-meta">
+                            <div class="event-meta-item"><i class="fa fa-clock"></i> 10PM – 4AM</div>
+                            <div class="event-meta-item"><i class="fa fa-star"></i> VIP Available</div>
+                            <div class="event-meta-item"><i class="fa fa-phone"></i> Reservations</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card reveal reveal-delay-2">
+                    <div class="event-header" style="background:linear-gradient(135deg,#0D0D0D,#004A1A);">
+                        <div class="event-icon">🎉</div>
+                        <div class="event-day">Monthly Special</div>
+                        <div class="event-name">Speedy's Monthly Grill Fest</div>
+                    </div>
+                    <div class="event-body">
+                        <p class="event-desc">
+                            Our grand monthly outdoor grilling event. Live suya stations, whole fish BBQ,
+                            live band performances, and an all-you-can-drink happy hour.
+                            Lagos' most anticipated monthly experience.
+                        </p>
+                        <div class="event-meta">
+                            <div class="event-meta-item"><i class="fa fa-calendar"></i> Last Sunday/Month</div>
+                            <div class="event-meta-item"><i class="fa fa-users"></i> All Welcome</div>
+                            <div class="event-meta-item"><i class="fa fa-ticket-alt"></i> ₦2,000 Entry</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="event-card reveal reveal-delay-3">
+                    <div class="event-header" style="background:linear-gradient(135deg,#0D0D0D,#4A3000);">
+                        <div class="event-icon">🎂</div>
+                        <div class="event-day">Any Day</div>
+                        <div class="event-name">Private Events & Celebrations</div>
+                    </div>
+                    <div class="event-body">
+                        <p class="event-desc">
+                            Birthdays, corporate dinners, anniversaries, and networking events —
+                            we handle everything. Custom menus, décor, DJ, and VIP section available.
+                        </p>
+                        <div class="event-meta">
+                            <div class="event-meta-item"><i class="fa fa-phone"></i> Call to Book</div>
+                            <div class="event-meta-item"><i class="fa fa-users"></i> 20–200 Guests</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="event-card reveal reveal-delay-4">
+                    <div class="event-header" style="background:linear-gradient(135deg,#0D0D0D,#1A001A);">
+                        <div class="event-icon">🌅</div>
+                        <div class="event-day">Mon – Fri, 5–8PM</div>
+                        <div class="event-name">Happy Hour — 20% Off Everything</div>
+                    </div>
+                    <div class="event-body">
+                        <p class="event-desc">
+                            After-work decompression at its finest. Grab your colleagues, wind down with
+                            discounted drinks and small chops, and let the working week fade away.
+                        </p>
+                        <div class="event-meta">
+                            <div class="event-meta-item"><i class="fa fa-clock"></i> 5PM – 8PM</div>
+                            <div class="event-meta-item"><i class="fa fa-percent"></i> 20% Off</div>
+                            <div class="event-meta-item"><i class="fa fa-utensils"></i> Food & Drinks</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="event-card reveal reveal-delay-5">
+                    <div class="event-header" style="background:linear-gradient(135deg,#0D0D0D,#002040);">
+                        <div class="event-icon">🎸</div>
+                        <div class="event-day">Every Wednesday</div>
+                        <div class="event-name">Midweek Live Band & Jazz Night</div>
+                    </div>
+                    <div class="event-body">
+                        <p class="event-desc">
+                            Break up the week with soulful live music. Our rotating lineup of Lagos' finest musicians
+                            performs jazz, highlife, and soul every Wednesday night.
+                        </p>
+                        <div class="event-meta">
+                            <div class="event-meta-item"><i class="fa fa-clock"></i> 7PM – 11PM</div>
+                            <div class="event-meta-item"><i class="fa fa-music"></i> Live Band</div>
+                            <div class="event-meta-item"><i class="fa fa-ticket-alt"></i> Free Entry</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+       GALLERY SECTION
+  ============================================= -->
+    <section id="gallery">
+        <div class="container">
+            <div style="text-align:center;">
+                <span class="section-tag">Inside Speedy Dish</span>
+                <h2 class="section-title reveal" style="margin:0 auto 12px;">A Feast <span>for the Eyes</span></h2>
+                <p class="section-sub reveal reveal-delay-1" style="margin:0 auto 0;">Good food deserves to be seen.
+                    Scroll through our world.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item reveal" style="background:linear-gradient(135deg,#3D1C00,#6B3500);">
+                    <span>🍛</span>
+                    <div class="gallery-item-label">Jollof Rice Station</div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-1"
+                    style="background:linear-gradient(135deg,#1A0000,#3D0000);">
+                    <span>🎵</span>
+                    <div class="gallery-item-label">Friday Night Vibes</div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-2"
+                    style="background:linear-gradient(135deg,#001A00,#003D00);">
+                    <span>🍹</span>
+                    <div class="gallery-item-label">Cocktail Bar</div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-3"
+                    style="background:linear-gradient(135deg,#1A1A00,#3D3D00);">
+                    <span>🔥</span>
+                    <div class="gallery-item-label">Suya Grill</div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-4"
+                    style="background:linear-gradient(135deg,#001A2C,#00386B);">
+                    <span>🍸</span>
+                    <div class="gallery-item-label">VIP Lounge</div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-1"
+                    style="background:linear-gradient(135deg,#2C0030,#5C0060);">
+                    <span>🥩</span>
+                    <div class="gallery-item-label">Premium Grills</div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-2"
+                    style="background:linear-gradient(135deg,#1A0A00,#4A2200);">
+                    <span>🎤</span>
+                    <div class="gallery-item-label">Live Performances</div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-3"
+                    style="background:linear-gradient(135deg,#0A1A00,#204A00);">
+                    <span>🐟</span>
+                    <div class="gallery-item-label">Fresh Seafood</div>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:32px;" class="reveal">
+                <p style="font-size:0.88rem;color:var(--muted);margin-bottom:16px;">Follow us for daily food & vibes 📸
+                </p>
+                <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+                    <a href="#" class="btn btn-dark" style="font-size:0.82rem;padding:10px 20px;">
+                        <i class="fab fa-instagram"></i> @SpeedyDishLagos
+                    </a>
+                    <a href="#" class="btn btn-dark" style="background:#1877F2;font-size:0.82rem;padding:10px 20px;">
+                        <i class="fab fa-facebook"></i> Speedy Dish Restaurant
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+       TESTIMONIALS / REVIEWS SECTION
+  ============================================= -->
+    <section id="reviews">
+        <div class="container">
+            <span class="section-tag">What Lagos Says</span>
+            <h2 class="section-title reveal">Real <span>Reviews</span></h2>
+            <p class="section-sub reveal reveal-delay-1">Don't just take our word for it — hear from the people who
+                matter most.</p>
+
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-card featured reveal">
+                    <div class="review-quote">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">
+                        The jollof rice at Speedy Dish is on a different level entirely. That smoky firewood taste?
+                        I haven't found anything like it in all of Lagos. I come every Friday now — the lounge is
+                        equally incredible.
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">AO</div>
+                        <div>
+                            <div class="review-name">Adaeze Okonkwo</div>
+                            <div class="review-role">Verified Customer · Lagos Island</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card reveal reveal-delay-1">
+                    <div class="review-quote">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">
+                        Came for a birthday dinner and the team went above and beyond. Custom decorations,
+                        amazing food, and the DJ kept the whole night alive. Highly recommend for events!
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">TF</div>
+                        <div>
+                            <div class="review-name">Taiwo Fashola</div>
+                            <div class="review-role">Corporate Event Planner · VI</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card reveal reveal-delay-2">
+                    <div class="review-quote">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">
+                        Their catfish pepper soup is the best I've ever had — period. Rich, spicy, perfect.
+                        The atmosphere on Saturday nights is electric. This is easily my favourite spot in Lagos.
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">KI</div>
+                        <div>
+                            <div class="review-name">Kelechi Ike</div>
+                            <div class="review-role">Food Blogger · Lekki</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card reveal reveal-delay-3">
+                    <div class="review-quote">"</div>
+                    <div class="review-stars">★★★★☆</div>
+                    <p class="review-text">
+                        The shawarma here is seriously underrated. Fresh ingredients, generous filling,
+                        perfectly grilled. Great spot for lunch during work hours — fast service too!
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">SB</div>
+                        <div>
+                            <div class="review-name">Seun Badmus</div>
+                            <div class="review-role">Regular · Ilupeju</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card reveal reveal-delay-4">
+                    <div class="review-quote">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">
+                        I've attended their monthly Grill Fest twice now. Both times were absolutely magical.
+                        The suya, the live music, the cocktails — everything is top tier. Will always come back.
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">PN</div>
+                        <div>
+                            <div class="review-name">Priscilla Nwosu</div>
+                            <div class="review-role">Monthly Grill Fest Regular</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card reveal reveal-delay-5">
+                    <div class="review-quote">"</div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">
+                        Speedy Dish is where my team comes for every work celebration. The private event
+                        arrangement was seamless, the food exceeded expectations, and the vibe was immaculate.
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">OA</div>
+                        <div>
+                            <div class="review-name">Olumide Adeyemi</div>
+                            <div class="review-role">Tech Lead · Ikeja</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+       RESERVATIONS SECTION
+  ============================================= -->
+    <section id="reservations">
+        <div class="container">
+            <div class="res-grid">
+                <!-- Info side -->
+                <div class="res-info">
+                    <span class="section-tag">Book Your Table</span>
+                    <h2 class="section-title reveal">Reserve Your <span>Spot</span></h2>
+                    <p class="section-sub reveal reveal-delay-1">
+                        Whether it's a quick dinner or a full VIP night out, secure your table ahead of time
+                        and we'll have everything ready for you.
+                    </p>
+
+                    <div class="reveal reveal-delay-2">
+                        <div class="res-contact-item">
+                            <div class="res-contact-icon"><i class="fa fa-phone"></i></div>
+                            <div>
+                                <div class="res-contact-label">Call Us Directly</div>
+                                <div class="res-contact-value">+234 801 234 5678 / +234 809 876 5432</div>
+                            </div>
+                        </div>
+                        <div class="res-contact-item">
+                            <div class="res-contact-icon"><i class="fa fa-clock"></i></div>
+                            <div>
+                                <div class="res-contact-label">Opening Hours</div>
+                                <div class="res-contact-value">Mon–Thu: 11AM–12AM | Fri–Sat: 11AM–4AM | Sun: 12PM–10PM
+                                </div>
+                            </div>
+                        </div>
+                        <div class="res-contact-item">
+                            <div class="res-contact-icon"><i class="fa fa-map-marker-alt"></i></div>
+                            <div>
+                                <div class="res-contact-label">Our Location</div>
+                                <div class="res-contact-value">2 Coker Rd, Ilupeju, Lagos 102215</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reservation Form -->
+                <div class="res-form reveal reveal-delay-2" id="res-form-wrapper">
+                    <h3>Make a Reservation</h3>
+                    <p>Fill the form and we'll confirm your booking within 2 hours.</p>
+
+                    <div id="res-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-name">Full Name *</label>
+                                <input type="text" id="res-name" placeholder="e.g. Adaeze Johnson" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="res-phone">Phone Number *</label>
+                                <input type="tel" id="res-phone" placeholder="+234 800 000 0000" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-date">Date *</label>
+                                <input type="date" id="res-date" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="res-time">Time *</label>
+                                <input type="time" id="res-time" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-guests">Number of Guests *</label>
+                                <select id="res-guests" required>
+                                    <option value="">Select guests</option>
+                                    <option>1–2 guests</option>
+                                    <option>3–5 guests</option>
+                                    <option>6–10 guests</option>
+                                    <option>11–20 guests</option>
+                                    <option>20+ guests (Event)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-occasion">Occasion</label>
+                                <select id="res-occasion">
+                                    <option value="">Select occasion</option>
+                                    <option>Regular Dining</option>
+                                    <option>Birthday Celebration</option>
+                                    <option>Anniversary</option>
+                                    <option>Corporate Dinner</option>
+                                    <option>Private Party</option>
+                                    <option>VIP Lounge Night</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-note">Special Requests</label>
+                            <textarea id="res-note"
+                                placeholder="Any dietary requirements, seating preferences, or special arrangements..."></textarea>
+                        </div>
+                        <button class="btn btn-primary form-submit" onclick="submitReservation()">
+                            <i class="fa fa-calendar-check"></i> Confirm My Reservation
+                        </button>
+                    </div>
+
+                    <!-- Success message -->
+                    <div class="form-success" id="res-success">
+                        <i class="fa fa-check-circle"></i>
+                        <h4>Reservation Received!</h4>
+                        <p>Thank you! We'll call to confirm your booking within 2 hours. See you at Speedy Dish! 🍽️</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+       CONTACT SECTION
+  ============================================= -->
+    <section id="contact">
+        <div class="container">
+            <span class="section-tag">Find Us</span>
+            <h2 class="section-title reveal">Get in <span>Touch</span></h2>
+            <p class="section-sub reveal reveal-delay-1">We're always happy to hear from you — food questions, event
+                bookings, or just to say hello.</p>
+
+            <div class="contact-grid">
+                <!-- Contact info -->
+                <div>
+                    <div class="contact-cards reveal reveal-delay-1">
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fa fa-map-marker-alt"></i></div>
+                            <div>
+                                <div class="contact-card-title">Our Address</div>
+                                <div class="contact-card-val">2 Coker Road, Ilupeju, Lagos 102215, Lagos State, Nigeria
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fa fa-phone"></i></div>
+                            <div>
+                                <div class="contact-card-title">Phone Numbers</div>
+                                <div class="contact-card-val">+234 801 234 5678<br>+234 809 876 5432</div>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fa fa-envelope"></i></div>
+                            <div>
+                                <div class="contact-card-title">Email Address</div>
+                                <div class="contact-card-val">hello@speedydish.com<br>events@speedydish.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fa fa-clock"></i></div>
+                            <div>
+                                <div class="contact-card-title">Opening Hours</div>
+                                <div class="contact-card-val">
+                                    Mon–Thu: 11AM – 12AM<br>
+                                    Fri–Sat: 11AM – 4AM<br>
+                                    Sunday: 12PM – 10PM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/2348012345678" class="wa-btn reveal reveal-delay-2" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp" style="font-size:1.2rem;"></i>
+                        Chat With Us on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Google Map -->
+                <div class="contact-map reveal reveal-delay-3">
+                    <iframe title="Speedy Dish Location Map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.6!2d3.3630!3d6.5561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c6a8b7c1e3d%3A0x8a7b5e6f2c1d4e5f!2s2%20Coker%20Rd%2C%20Ilupeju%2C%20Lagos%20102215%2C%20Lagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng"
+                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+       NEWSLETTER SECTION
+  ============================================= -->
+    <section id="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <div class="newsletter-text">
+                    <h2>Stay in the Loop 🔥</h2>
+                    <p>Get exclusive deals, event invites & menu updates straight to your inbox.</p>
+                </div>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address..." id="newsletter-email" />
+                    <button class="btn" onclick="subscribeNewsletter()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+       FOOTER
+  ============================================= -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <a href="#hero" class="nav-logo" style="text-decoration:none;">
+                            <div class="nav-logo-icon">🍽️</div>
+                            <div class="nav-logo-text">
+                                Speedy Dish
+                                <span>Restaurant & Lounge</span>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="footer-about">
+                        Lagos' favourite spot for authentic Nigerian cuisine, fast food fusion, and premium nightlife.
+                        Dine fast, live louder — at 2 Coker Rd, Ilupeju.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/2348012345678" class="social-icon" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Our Menu</a></li>
+                        <li><a href="#lounge">Lounge & Bar</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#reservations">Reservations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Menu Highlights -->
+                <div class="footer-col">
+                    <h4>Menu Highlights</h4>
+                    <ul class="footer-links">
+                        <li><a href="#menu">Jollof Rice Combos</a></li>
+                        <li><a href="#menu">Suya Platters</a></li>
+                        <li><a href="#menu">Shawarma & Wraps</a></li>
+                        <li><a href="#menu">Pepper Soup</a></li>
+                        <li><a href="#menu">Small Chops</a></li>
+                        <li><a href="#menu">Cocktails & Drinks</a></li>
+                        <li><a href="#menu">Grills & BBQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Opening Hours -->
+                <div class="footer-col">
+                    <h4>Opening Hours</h4>
+                    <div class="footer-hours">
+                        <p>Mon – Thu<br><span>11:00 AM – 12:00 AM</span></p>
+                        <p style="margin-top:10px;">Friday – Saturday<br><span>11:00 AM – 4:00 AM</span></p>
+                        <p style="margin-top:10px;">Sunday<br><span>12:00 PM – 10:00 PM</span></p>
+                        <p style="margin-top:16px;font-size:0.8rem;">
+                            <span style="color:var(--orange);">📞</span> +234 801 234 5678
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <p>© 2025 Speedy Dish Restaurant & Lounge. All rights reserved. | 2 Coker Rd, Ilupeju, Lagos</p>
+                <p>Made with ❤️ for Lagos | <a href="mailto:hello@speedydish.com">hello@speedydish.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- =============================================
+       JAVASCRIPT
+  ============================================= -->
+    <script>
+        // ---- Hamburger Menu ----
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ---- Scroll to top button ----
+        const scrollBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+
+        // ---- Menu Category Tabs ----
+        function switchTab(btn, catId) {
+            // Remove active from all tabs and categories
+            document.querySelectorAll('.menu-tab').forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            document.querySelectorAll('.menu-category').forEach(c => c.classList.remove('active'));
+
+            // Activate selected
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+            const cat = document.getElementById('cat-' + catId);
+            if (cat) cat.classList.add('active');
+        }
+
+        // ---- Reservation Form Submission ----
+        function submitReservation() {
+            const name = document.getElementById('res-name').value.trim();
+            const phone = document.getElementById('res-phone').value.trim();
+            const date = document.getElementById('res-date').value;
+            const time = document.getElementById('res-time').value;
+            const guests = document.getElementById('res-guests').value;
+
+            if (!name || !phone || !date || !time || !guests) {
+                alert('Please fill in all required fields (Name, Phone, Date, Time, Guests).');
+                return;
+            }
+
+            // Show success state
+            document.getElementById('res-form').style.display = 'none';
+            document.getElementById('res-success').style.display = 'block';
+        }
+
+        // ---- Newsletter Subscription ----
+        function subscribeNewsletter() {
+            const email = document.getElementById('newsletter-email').value.trim();
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            alert('🎉 You\'re subscribed! Welcome to the Speedy Dish family. Look out for exclusive deals in your inbox.');
+            document.getElementById('newsletter-email').value = '';
+        }
+
+        // ---- Scroll Reveal Animation ----
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ---- Set minimum date for reservation to today ----
+        const dateInput = document.getElementById('res-date');
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        }
+
+        // ---- Smooth active nav link highlighting ----
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.style.color = link.getAttribute('href') === '#' + id
+                            ? 'var(--orange)'
+                            : '';
+                    });
+                }
+            });
+        }, { threshold: 0.4 });
+
+        sections.forEach(sec => sectionObserver.observe(sec));
+    </script>
+
+</body>
+
+</html>
